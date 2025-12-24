@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,4 +39,106 @@
 
 .read-the-docs {
   color: #888;
+} */
+
+/* ===============================
+   VILLAGE BACKGROUND WRAPPER
+================================ */
+.village {
+  background-image: url("./assets/images/bg-image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  min-height: 100vh;
+  width: 100%;
+
+  position: relative;
+  overflow: hidden;
 }
+
+/* ===============================
+   LIGHT OVERLAY (NOT DARK)
+================================ */
+.village::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.08); /* very light shade */
+  z-index: 1;
+}
+
+/* ===============================
+   DROPS / PARTICLE EFFECT
+================================ */
+.village::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.55) 1px,
+      transparent 1px
+    ),
+    radial-gradient(circle, rgba(255, 255, 255, 0.35) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.25) 1px, transparent 1px);
+
+  background-size: 120px 120px, 180px 180px, 240px 240px;
+
+  background-position: 0 0, 60px 90px, 120px 40px;
+
+  animation: floatDrops 18s linear infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* ===============================
+   DROPS FLOAT ANIMATION
+================================ */
+@keyframes floatDrops {
+  from {
+    background-position: 0 0, 60px 90px, 120px 40px;
+  }
+  to {
+    background-position: 0 400px, 60px 500px, 120px 600px;
+  }
+}
+
+/* ===============================
+   CONTENT SHOULD BE ABOVE EFFECTS
+================================ */
+.village > * {
+  position: relative;
+  z-index: 3;
+}
+
+/* ===============================
+   RESPONSIVE OPTIMIZATION
+================================ */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .village::after {
+    background-size: 100px 100px, 160px 160px, 220px 220px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .village::after {
+    background-size: 80px 80px, 140px 140px, 200px 200px;
+  }
+}
+
+/* .village {
+  background-image: url("./assets/images/bg-image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  width: 100%;
+
+  position: relative;
+} */
