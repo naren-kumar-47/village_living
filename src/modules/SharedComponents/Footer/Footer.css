@@ -1,0 +1,45 @@
+.footer {
+  color: #fff;
+  padding: 15px 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-left {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.footer-right {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-right a {
+  color: #fff;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.footer-right a:hover {
+  color: #ffcc80;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    flex-direction: column-reverse;
+    gap: 10px;
+    text-align: center;
+  }
+}
