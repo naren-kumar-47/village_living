@@ -4,6 +4,7 @@
   justify-content: center;
   text-align: center;
   padding: 20px;
+  height: 100vh;
 }
 .home-content {
   display: flex;
@@ -21,9 +22,7 @@
   font-size: 70px;
   font-weight: 700;
   color: #3a1d16;
-  -webkit-text-stroke: 2px #fff;
   letter-spacing: 2px;
-  animation: pulseText 3s ease-in-out infinite;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -56,6 +55,13 @@
   .home-logo {
     height: 280px;
   }
+  .home-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+  }
 
   .coming-soon {
     font-size: 75px;
@@ -68,9 +74,16 @@
     height: 280px;
   }
 
+  .home-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+  }
+
   .coming-soon {
     font-size: 60px;
     letter-spacing: 1px;
-    -webkit-text-stroke: 1px #fff;
   }
 }
