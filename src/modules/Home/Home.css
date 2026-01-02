@@ -71,5 +71,6 @@
   .coming-soon {
     font-size: 60px;
     letter-spacing: 1px;
+    -webkit-text-stroke: 1px #fff;
   }
 }
