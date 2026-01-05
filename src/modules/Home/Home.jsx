@@ -7,7 +7,7 @@ const Home = () => {
     <div className="home-wrapper">
       <div className="home-content">
         <img src={logo} alt="Logo" className="home-logo float-logo" />
-        <h1 className="coming-soon">Launching Soon</h1>
+        <h1 className="coming-soon">Launching Soon!!</h1>
       </div>
     </div>
   );
